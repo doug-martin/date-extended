@@ -1,0 +1,28 @@
+{
+    "name": "date-extended",
+    "version": "0.0.1",
+    "description": "Additional date extensions with a chainable api",
+    "main": "index.js",
+    "scripts": {
+        "test": "it -r dot"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git:git@github.com:doug-martin/date-extended.git"
+    },
+    "keywords": [
+        "Date",
+        "extender",
+        "utilities"
+    ],
+    "author": "Doug Martin",
+    "license": "MIT",
+    "dependencies": {
+        "extender": "0.0.4",
+        "is-extended": "0.0.1"
+    },
+    "devDependencies": {
+        "it": "~0.1.0",
+        "grunt-it": "~0.3.0"
+    }
+}
