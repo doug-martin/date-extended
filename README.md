@@ -1,4 +1,4 @@
-[![build status](https://secure.travis-ci.org/doug-martin/date-extended.png)](http://travis-ci.org/doug-martin/date-extended)
+[![Build Status](https://travis-ci.org/doug-martin/date-extended.png?branch=master)](undefined)
 
 # date-extended
 
