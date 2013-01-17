@@ -1,7 +1,7 @@
 (function () {
     "use strict";
 
-    function defineDate(extender, is) {
+    function defineDate(extended, is) {
 
         function _pad(string, length, ch, end) {
             string = "" + string; //check for numbers
@@ -904,7 +904,7 @@
         };
 
 
-        var i, ret = extender.define(is.isDate, date).define(is.isString, stringDate).define(is.isNumber, numberDate);
+        var ret = extended.define(is.isDate, date).define(is.isString, stringDate).define(is.isNumber, numberDate);
         for (i in date) {
             if (date.hasOwnProperty(i)) {
                 ret[i] = date[i];
@@ -926,15 +926,15 @@
 
     if ("undefined" !== typeof exports) {
         if ("undefined" !== typeof module && module.exports) {
-            module.exports = defineDate(require("extender"), require("is-extended"));
+            module.exports = defineDate(require("extended"), require("is-extended"));
 
         }
     } else if ("function" === typeof define) {
         define(["require"], function (require) {
-            return defineDate(require("extender"), require("is-extended"));
+            return defineDate(require("extended"), require("is-extended"));
         });
     } else {
-        this.dateExtended = defineDate(this.extender, this.isExtended);
+        this.dateExtended = defineDate(this.extended, this.isExtended);
     }
 
 }).call(this);
