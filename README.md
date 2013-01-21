@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/doug-martin/date-extended.png?branch=master)](undefined)
 
+[![browser support](http://ci.testling.com/doug-martin/date-extended.png)](http://ci.testling.com/doug-martin/date-extended)
+
 # date-extended
 
 `date-extended` is a Javascript library that can be used standalone or incorporated into [`extended`](https://github.com/doug-martin/extended)
