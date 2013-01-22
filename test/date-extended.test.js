@@ -1013,9 +1013,9 @@ it.describe("date-extended",function (it) {
                 it.should("add milliseconds", function () {
                     var interv = "millisecond";
 
-                    var dtA = new Date(2000, 11, 31, 23, 59, 59, 999);
+                    var dtA = new Date(2000, 11, 31, 23, 59, 59, 900);
                     var dtB = new Date(2001, 0, 1, 0, 0, 0, 0);
-                    assert.deepEqual(dtB, dateExtended.add(dtA, interv, 1));
+                    assert.deepEqual(dtB, dateExtended.add(dtA, interv, 100));
 
                     dtA = new Date(2000, 11, 27, 8, 10, 53, 2);
                     dtB = new Date(2000, 11, 27, 8, 10, 54, 2);

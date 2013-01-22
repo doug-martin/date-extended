@@ -135,7 +135,7 @@
                             weeks = parseInt(days / 7, 10);
                             // Mark the date advanced by the number of
                             // round weeks (may be zero)
-                            var dtMark = new Date(date1);
+                            var dtMark = new Date(+date1);
                             dtMark.setDate(dtMark[utc ? "getUTCDate" : "getDate"]() + (weeks * 7));
                             var dayMark = dtMark[utc ? "getUTCDay" : "getDay"]();
 
@@ -447,8 +447,8 @@
              * @returns -1 if date1 is < date2 0 if date1 === date2  1 if date1 > date2
              */
             compare: function (/*Date*/date1, /*Date*/date2, /*String*/portion) {
-                date1 = new Date(date1);
-                date2 = new Date((date2 || new Date()));
+                date1 = new Date(+date1);
+                date2 = new Date(+(date2 || new Date()));
 
                 if (portion === "date") {
                     // Ignore times and compare dates.
@@ -525,7 +525,7 @@
                 var res = addTransform(interval, date, amount || 0);
                 amount = res[0];
                 var property = res[1];
-                var sum = new Date(date);
+                var sum = new Date(+date);
                 var fixOvershoot = res[2];
                 if (property) {
                     sum["set" + property](sum["get" + property]() + amount);
@@ -773,7 +773,7 @@
             };
         }
 
-        var intervals = ["year", "month", "day", "hour", "minute", "second"], interval;
+        var intervals = ["year", "month", "day", "hour", "minute", "second"];
         for (var i = 0, l = intervals.length; i < l; i++) {
             addInterval(intervals[i]);
         }
