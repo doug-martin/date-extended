@@ -930,8 +930,8 @@
 
         }
     } else if ("function" === typeof define) {
-        define(["require"], function (require) {
-            return defineDate(require("extended"), require("is-extended"), require("array-extended"));
+        define(["extended", "is-extended", "array-extended"], function (extended, is, arr) {
+            return defineDate(extended, is, arr);
         });
     } else {
         this.dateExtended = defineDate(this.extended, this.isExtended, this.arrayExtended);

@@ -5,58 +5,17 @@ var it = require('it'),
 
 
 it.describe("date-extended",function (it) {
-
-// Create a fake Date object with toString and toLocaleString
-// results manually set to simulate tests for multiple browsers
-    var FakeDate = function (str, strLocale, timzezoneOffset) {
-        this.str = str || '';
-        this.strLocale = strLocale || '';
-        this.timezoneOffset = timzezoneOffset || 0;
-        this.getFullYear = function () {
-        };
-        this.getMonth = function () {
-        };
-        this.getDate = function () {
-        };
-        this.getDay = function () {
-        };
-        this.getHours = function () {
-        };
-        this.getMinutes = function () {
-        };
-        this.getMilliseconds = function () {
-        };
-        this.getSeconds = function () {
-        };
-        this.getUTCFullYear = function () {
-        };
-        this.getUTCMonth = function () {
-        };
-        this.getUTCDate = function () {
-        };
-        this.getUTCDay = function () {
-        };
-        this.getUTCHours = function () {
-        };
-        this.getUTCMinutes = function () {
-        };
-        this.getUTCMilliseconds = function () {
-        };
-        this.getUTCSeconds = function () {
-        };
-        this.getTimezoneOffset = function () {
-            return this.timezoneOffset;
-        };
-        this.toString = function () {
-            return this.str;
-        };
-        this.toLocaleString = function () {
-            return this.strLocale;
-        };
-        Date.call(this);
+    var dt = new Date();
+    dt.getTimezoneOffset = function () {
+        return this.timezoneOffset;
     };
-    FakeDate.prototype = new Date();
-    var dt = new FakeDate();
+    dt.toString = function () {
+        return this.str;
+    };
+    dt.toLocaleString = function () {
+        return this.strLocale;
+    };
+
 //Super of other classes
 
 
@@ -2064,6 +2023,6 @@ it.describe("date-extended",function (it) {
             assert.deepEqual(dateExtended.secondsAgo(2).getSeconds(), dateExtended.add(new Date(), "second", -2).getSeconds());
         });
     });
-}).as(module).run();
+}).as(module);
 
 
