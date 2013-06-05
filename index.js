@@ -929,7 +929,7 @@
             module.exports = defineDate(require("extended"), require("is-extended"), require("array-extended"));
 
         }
-    } else if ("function" === typeof define) {
+    } else if ("function" === typeof define && define.amd) {
         define(["extended", "is-extended", "array-extended"], function (extended, is, arr) {
             return defineDate(extended, is, arr);
         });
