@@ -1,6 +1,6 @@
 {
     "name": "date-extended",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "Additional date extensions with a chainable api",
     "main": "index.js",
     "scripts": {
@@ -31,13 +31,13 @@
     "dependencies": {
         "extended": "~0.0.3",
         "is-extended": "~0.0.3",
-        "array-extended": "~0.0.3",
-        "grunt-contrib-uglify": "~0.2.0",
-        "grunt": "~0.4.1",
-        "grunt-contrib-jshint": "~0.4.3"
+        "array-extended": "~0.0.3"
     },
     "devDependencies": {
         "it": "~0.2.0",
-        "grunt-it": "~0.3.0"
+        "grunt-it": "~0.3.0",
+        "grunt-contrib-uglify": "~0.2.0",
+        "grunt": "~0.4.1",
+        "grunt-contrib-jshint": "~0.4.3"
     }
 }
