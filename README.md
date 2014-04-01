@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/doug-martin/date-extended.png?branch=master)]((https://travis-ci.org/doug-martin/date-extended)
+[![Build Status](https://travis-ci.org/doug-martin/date-extended.png?branch=master)](https://travis-ci.org/doug-martin/date-extended)
 
 [![browser support](https://ci.testling.com/doug-martin/date-extended.png)](https://ci.testling.com/doug-martin/date-extended)
 
