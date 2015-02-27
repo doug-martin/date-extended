@@ -282,12 +282,12 @@ Parses a date string into a date object
 
 ```javascript
  var aug_11_2006 = new Date(2006, 7, 11, 0);
- date.parse("08/11/06", "MM/dd/yy"); //aug_11_2006
- date.parse("11Aug2006", 'ddMMMyyyy'); //aug_11_2006
- date.parse("Aug2006", 'MMMyyyy'); //new Date(2006, 7, 1)
- date.parse("Aug 11, 2006", "MMM dd, yyyy"); //aug_11_2006
- date.parse("August 11, 2006", "MMMM dd, yyyy"); //aug_11_2006
- date.parse("Friday, August 11, 2006", "EEEE, MMMM dd, yyyy"); //aug_11_2006
+ date.parseDate("08/11/06", "MM/dd/yy"); //aug_11_2006
+ date.parseDate("11Aug2006", 'ddMMMyyyy'); //aug_11_2006
+ date.parseDate("Aug2006", 'MMMyyyy'); //new Date(2006, 7, 1)
+ date.parseDate("Aug 11, 2006", "MMM dd, yyyy"); //aug_11_2006
+ date.parseDate("August 11, 2006", "MMMM dd, yyyy"); //aug_11_2006
+ date.parseDate("Friday, August 11, 2006", "EEEE, MMMM dd, yyyy"); //aug_11_2006
 ```
 
 
